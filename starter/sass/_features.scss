@@ -1,0 +1,32 @@
+@use "shared";
+
+.features{
+    grid-column: center-start / center-end;
+
+    margin: 12rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 6rem;
+}
+
+.feature{
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    align-items: start;
+    &__icon{
+        color: var(--color-primary);
+        font-size: 4rem;
+        --ionicon-stroke-width: 20px;
+
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text{
+        font-size: 1.6rem;
+    }
+}
